@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Air Pollution Monitor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+      color: #333;
+    }
+
+    .pollution-info {
+      background-color: #ffe6e6;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .precautions {
+      background-color: #c6f7d0;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .precautions > img {
+      width: 400px;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+    }
+
+    .navbar {
+      margin-bottom: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #666;
+    }
+
+    .nav-link {
+      border-radius: 4px;
+      padding: 0.4rem 1rem;
+    }
+
+    .nav-item:nth-child(1) .nav-link {
+      border: 1px solid #ffcccb;
+      background-color: #ffcccb;
+      transition: background-color 0.3s;
+    }
+    
+    .nav-item:nth-child(2) .nav-link {
+      border: 1px solid #d4edda;
+      background-color: #d4edda;
+      transition: background-color 0.3s;
+    }
+
+    img {
+      width: 70%;
+      margin: 10px 0;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .nav-item:nth-child(1) .nav-link:is(:hover, :focus-visible) {
+        background-color: #ff4c49;
+        color: #fff;
+        /* light red */
+      }
+
+      .nav-item:nth-child(2) .nav-link:is(:hover, :focus-visible) {
+        background-color: #28661d;
+        color: #fff;
+        /* light green */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Air Pollution Monitor</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-4">
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/register">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="header">
+      <h1>Welcome to Air Pollution Monitor</h1>
+      <p>Your go-to source for monitoring air quality and taking preventive measures to protect your health.</p>
+    </div>
+    <hr>
+    <div class="pollution-info">
+      <h2>Air Pollution: A Growing Concern</h2>
+      <p>Air pollution is a major environmental risk to our health, causing respiratory problems, heart diseases, and
+        even premature death. It's estimated that 9 out of 10 people worldwide breathe polluted air.</p>
+      <!-- <img src="https://en.idei.club/uploads/posts/2023-05/thumbs/1685506459_en-idei-club-p-pollution-cartoon-dizain-instagram-66.jpg" alt="Air pollution image"> -->
+    </div>
+    <hr>
+    <div class="precautions">
+      <h2>Take Precautions Against Air Pollution</h2>
+      <ul>
+        <li>Wear a mask when outdoors</li>
+        <li>Avoid heavily polluted areas</li>
+        <li>Use air purifiers at home</li>
+        <li>Plant trees and support reforestation efforts</li>
+      </ul>
+      <img src="https://us.123rf.com/450wm/ximagination/ximagination2210/ximagination221003151/192771992-air-pollution-vector-concept-group-of-people-demonstrate-to-stop-air-pollution-while-wearing-face.jpg?ver=6"
+        alt="Air pollution precautions image">
+    </div>
+    <div class="footer">
+      <p>&copy; 2024 Air Pollution Monitor. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
