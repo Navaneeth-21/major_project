@@ -141,23 +141,22 @@
                         </div>
                         <div class="col-md-6 pollution-info">
                             <p><strong>PM2.5:</strong> <span class="pollution-value"><%= pollutionData.pm2_5 %> µg/m³</span></p>
-                            <!-- Add other pollution data as per your API response structure -->
+                            <p><strong>PM10:</strong> <span class="pollution-value"><%= pollutionData.pm10 %> µg/m³</span></p>
+                            <p><strong>NH3:</strong> <span class="pollution-value"><%= pollutionData.nh3 %> µg/m³</span></p>
                         </div>
                     </div>
 
                     <h3 class="mt-4">Health Precautions</h3>
                     <div class="health-precaution">
-                        <% if (pollutionData.co > 200) { %>
-                            Avoid outdoor activities and use air purifiers.
-                        <% } else { %>
-                            Normal outdoor activities can be carried out.
-                        <% } %>
+                        <div class="precautions">
+                            <%- pollutionData.precautions %>
+                        </div>
                     </div>
                 </div>
             </div>
         <% } %>
 
-        <a href="/dashboard/logout" class="btn btn-danger">Logout</a>
+        <a href="/dashboard/logout" class="btn btn-danger mt-3">Logout</a>
 
     </div>
 
