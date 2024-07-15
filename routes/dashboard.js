@@ -51,6 +51,8 @@ router.post("/get-data", auth, async (req, res) => {
       user: req.user,
       pollutionData: { ...pollutionData, precautions },
       city,
+      lat  : lat,
+      lon : lon,
       error: null,
     });
   } catch (error) {
@@ -59,6 +61,7 @@ router.post("/get-data", auth, async (req, res) => {
       user: req.user,
       pollutionData: null,
       city: null,
+      
       error: "Server error",
     });
   }

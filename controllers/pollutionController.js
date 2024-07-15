@@ -32,12 +32,16 @@ exports.getPollutionData = async (req, res) => {
       pm10: data.list[0].components.pm10,
       nh3: data.list[0].components.nh3,
       precautions: getHealthPrecautions(data.list[0].components),
+      lat,
+      lon
     };
 
     res.render('dashboard', {
       user: req.user,
       pollutionData: pollutionDetails,
       city: city,
+      lat : lat,
+      lon : lon,
       error: null,
     });
   } catch (err) {
@@ -46,6 +50,8 @@ exports.getPollutionData = async (req, res) => {
       user: req.user,
       pollutionData: null,
       city: null,
+      lat : null,
+      lon : null,
       error: err.message === 'City not found' ? err.message : 'Server error',
     });
   }
